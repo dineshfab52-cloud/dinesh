@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dinesh N — Digital Marketing Executive specializing in SEO, WordPress, social media marketing, Google Ads and analytics.">
+  <meta name="theme-color" content="#101827">
+  <title>Dinesh N | Digital Marketing Executive</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --ink: #172033;
+      --muted: #5e687b;
+      --accent: #6759e8;
+      --accent2: #16a6a1;
+      --line: #e4e8f0;
+      --dark: #101827;
+      --radius: 20px;
+      --shadow: 0 16px 45px rgba(22, 32, 51, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent2); outline-offset: 4px; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: auto; }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(16, 24, 39, .95); backdrop-filter: blur(12px); color: white; }
+    nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-weight: 800; letter-spacing: .03em; font-size: 1.05rem; }
+    .brand span { color: #a9a0ff; }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 22px; font-size: .92rem; color: #d5d9e5; }
+    .navlinks a:hover { color: white; }
+    .hero { padding: 86px 0 76px; color: white; background: radial-gradient(circle at 85% 15%, rgba(103,89,232,.35), transparent 34%), radial-gradient(circle at 15% 100%, rgba(22,166,161,.18), transparent 35%), var(--dark); }
+    .hero-grid { display: grid; grid-template-columns: 1.5fr .8fr; align-items: center; gap: 52px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #c4beff; text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 800; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #42d7c7; box-shadow: 0 0 0 5px rgba(66,215,199,.12); }
+    h1 { font-size: clamp(2.7rem, 6vw, 4.8rem); line-height: 1.05; letter-spacing: -.055em; margin: 20px 0 16px; }
+    h1 span { color: #a9a0ff; }
+    .hero p { max-width: 680px; color: #c7cedd; font-size: 1.08rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; border: 1px solid transparent; border-radius: 12px; padding: 12px 18px; font-weight: 750; font-size: .94rem; transition: transform .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--accent); color: white; }
+    .btn-primary:hover { background: #5547d6; }
+    .btn-outline { color: white; border-color: #485269; }
+    .btn-outline:hover { background: #202b40; }
+    .profile-card { padding: 28px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06); border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,.16); }
+    .avatar { width: 82px; height: 82px; border-radius: 24px; display: grid; place-items: center; background: linear-gradient(135deg, #8175ff, #20bdb1); color: white; font-size: 1.8rem; font-weight: 900; margin-bottom: 20px; }
+    .profile-card h2 { margin: 0 0 4px; font-size: 1.35rem; }
+    .profile-card .muted { color: #c7cedd; font-size: .92rem; }
+    .profile-detail { display: flex; gap: 11px; align-items: flex-start; padding-top: 15px; margin-top: 15px; border-top: 1px solid rgba(255,255,255,.12); color: #e0e5f0; font-size: .9rem; overflow-wrap: anywhere; }
+    .profile-detail b { color: #a9a0ff; min-width: 68px; }
+    section { padding: 76px 0; }
+    .section-head { max-width: 700px; margin-bottom: 30px; }
+    .kicker { color: var(--accent); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 850; }
+    h2.section-title { margin: 8px 0 10px; font-size: clamp(1.9rem, 4vw, 2.6rem); letter-spacing: -.04em; line-height: 1.2; }
+    .section-head p, .muted-text { color: var(--muted); }
+    .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); }
+    .card p { color: var(--muted); margin-bottom: 0; }
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .fact { background: #f5f4ff; padding: 18px; border-radius: 15px; }
+    .fact strong { display: block; color: var(--accent); font-size: 1.45rem; }
+    .fact span { color: var(--muted); font-size: .86rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .skill-card h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { padding: 7px 11px; border: 1px solid #e5e2ff; border-radius: 999px; color: #4f46a5; background: #f7f6ff; font-size: .84rem; }
+    .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .project { display: flex; flex-direction: column; min-height: 100%; }
+    .project-top { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 15px; background: #f0efff; color: var(--accent); font-size: 1.25rem; font-weight: 900; margin-bottom: 17px; }
+    .project h3 { margin: 0 0 8px; font-size: 1.12rem; }
+    .project p { color: var(--muted); font-size: .93rem; }
+    .project ul { color: var(--muted); padding-left: 18px; font-size: .9rem; }
+    .project .chips { margin-top: auto; padding-top: 14px; }
+    .timeline { display: grid; gap: 18px; }
+    .timeline-item { display: grid; grid-template-columns: 12px 1fr; gap: 17px; }
+    .timeline-marker { position: relative; width: 12px; height: 12px; margin-top: 7px; border-radius: 50%; background: var(--accent); }
+    .timeline-marker::after { content: ""; position: absolute; width: 2px; top: 15px; bottom: -35px; left: 5px; background: #dedafc; }
+    .timeline-item:last-child .timeline-marker::after { display: none; }
+    .timeline-content h3 { margin: 0; font-size: 1.08rem; }
+    .timeline-content .meta { color: var(--accent); font-size: .9rem; font-weight: 700; }
+    .timeline-content p { margin: 5px 0 0; color: var(--muted); }
+    .contact { color: white; background: var(--dark); }
+    .contact .kicker { color: #a9a0ff; }
+    .contact .section-head p { color: #c7cedd; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .contact-card { padding: 22px; border-radius: 16px; border: 1px solid #303b50; background: #172236; }
+    .contact-card span { display: block; color: #a9a0ff; font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 800; }
+    .contact-card a, .contact-card p { display: block; margin: 5px 0 0; overflow-wrap: anywhere; color: white; }
+    footer { background: #0b111d; color: #9da8bb; text-align: center; padding: 22px 0; font-size: .85rem; }
+    @media (max-width: 850px) {
+      .hero-grid, .about-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 62px; }
+      .profile-card { max-width: 540px; }
+      .projects { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .container { width: min(100% - 28px, 1120px); }
+      nav { padding: 14px 0; align-items: flex-start; flex-direction: column; gap: 10px; }
+      .navlinks { gap: 13px; font-size: .85rem; }
+      section { padding: 54px 0; }
+      .skills-grid, .projects, .contact-grid { grid-template-columns: 1fr; }
+      .hero-grid { gap: 30px; }
+      .card { padding: 21px; }
+    }
+    @media print {
+      header, .actions, footer { display: none; }
+      body, .hero, .contact { background: white !important; color: #172033 !important; }
+      .hero p, .profile-card .muted, .profile-detail, .contact .section-head p { color: #333 !important; }
+      section { padding: 24px 0; break-inside: avoid; }
+      .card, .profile-card, .contact-card { box-shadow: none; border: 1px solid #ddd; background: white !important; color: #172033 !important; }
+      .contact-card a, .contact-card p { color: #172033 !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container" aria-label="Main navigation">
+      <a class="brand" href="#home">DINESH<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Digital Marketing · SEO · Content</div>
+          <h1>Hi, I'm Dinesh.<br><span>I grow digital presence.</span></h1>
+          <p>Digital Marketing Executive with a computer science background and hands-on project experience in WordPress, SEO, social media marketing, keyword research, and performance analytics.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#projects">Explore My Projects ↗</a>
+            <a class="btn btn-outline" href="#contact">Get in Touch</a>
+            <button class="btn btn-outline" onclick="window.print()" type="button">Print / Save PDF</button>
+          </div>
+        </div>
+        <aside class="profile-card" aria-label="Profile summary">
+          <div class="avatar" aria-hidden="true">DN</div>
+          <h2>Dinesh N</h2>
+          <div class="muted">Digital Marketing Executive</div>
+          <div class="profile-detail"><b>Location</b><span>Coimbatore, Tamil Nadu</span></div>
+          <div class="profile-detail"><b>Email</b><a href="mailto:dineshfab52@gmail.com">dineshfab52@gmail.com</a></div>
+          <div class="profile-detail"><b>Phone</b><a href="tel:+919344483937">+91 93444 83937</a></div>
+          <div class="profile-detail"><b>Portfolio</b><a href="https://dineshdm.site.je/wp" target="_blank" rel="noopener noreferrer">dineshdm.site.je/wp ↗</a></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">About me</div>
+          <h2 class="section-title">Marketing thinking, backed by technical knowledge.</h2>
+          <p>A concise overview of my approach to digital marketing and website optimization.</p>
+        </div>
+        <div class="about-grid">
+          <article class="card">
+            <h3>Professional Summary</h3>
+            <p>Results-focused digital marketing professional with an M.Sc. in Computer Science and hands-on experience delivering three WordPress, SEO, content, and social media projects. Applies keyword research, on-page and off-page SEO, SEO copywriting, Google Analytics 4 (GA4), Google Ads, and Canva to build search-ready websites and audience-focused campaigns. Combines technical knowledge, content development, and performance analysis to support visibility, engagement, and business growth.</p>
+          </article>
+          <div class="facts">
+            <div class="fact"><strong>3</strong><span>Digital marketing projects</span></div>
+            <div class="fact"><strong>2</strong><span>Computer science degrees</span></div>
+            <div class="fact"><strong>SEO</strong><span>On-page & off-page foundations</span></div>
+            <div class="fact"><strong>GA4</strong><span>Analytics platform knowledge</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="background:#fff">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Core competencies</div>
+          <h2 class="section-title">Skills & tools</h2>
+          <p>Capabilities and platforms listed in my resume.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="card skill-card">
+            <h3>Search Engine Optimization</h3>
+            <div class="chips">
+              <span class="chip">Keyword Research</span><span class="chip">On-page SEO</span><span class="chip">Off-page SEO</span><span class="chip">Technical SEO Basics</span><span class="chip">SEO Audits</span><span class="chip">SERP Analysis</span><span class="chip">Competitor Analysis</span><span class="chip">Meta Tags</span><span class="chip">Internal & External Links</span>
+            </div>
+          </article>
+          <article class="card skill-card">
+            <h3>Digital & Social Marketing</h3>
+            <div class="chips">
+              <span class="chip">Content Strategy</span><span class="chip">Content Marketing</span><span class="chip">Social Media Marketing</span><span class="chip">Facebook Marketing</span><span class="chip">Campaign Planning</span><span class="chip">Audience Targeting</span><span class="chip">Google Business Profile</span>
+            </div>
+          </article>
+          <article class="card skill-card">
+            <h3>Content & Analytics</h3>
+            <div class="chips">
+              <span class="chip">SEO Copywriting</span><span class="chip">Content Optimization</span><span class="chip">Hashtag Research</span><span class="chip">Performance Reporting</span><span class="chip">Web Analytics</span><span class="chip">Traffic Analysis</span><span class="chip">Engagement Analysis</span>
+            </div>
+          </article>
+          <article class="card skill-card">
+            <h3>Tools & Platforms</h3>
+            <div class="chips">
+              <span class="chip">WordPress</span><span class="chip">Canva</span><span class="chip">Google Ads</span><span class="chip">Google Analytics 4</span><span class="chip">Google Search Console</span><span class="chip">Google Keyword Planner</span><span class="chip">Meta Business Suite</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Selected work</div>
+          <h2 class="section-title">Digital marketing projects</h2>
+          <p>Project summaries are based on the experience described in my resume.</p>
+        </div>
+        <div class="projects">
+          <article class="card project">
+            <div class="project-top" aria-hidden="true">01</div>
+            <h3>Adventure Tourism Website</h3>
+            <p><strong>WordPress & SEO project</strong></p>
+            <ul>
+              <li>Built and managed a five-page WordPress website: Home, About Us, Packages, Destinations, and Activities.</li>
+              <li>Used Google Keyword Planner to research terms for six adventure-tourism service categories.</li>
+              <li>Optimized page titles, meta descriptions, website copy, and internal/external links.</li>
+              <li>Created Canva graphics, social captions, promotional copy, and targeted hashtags.</li>
+            </ul>
+            <div class="chips"><span class="chip">WordPress</span><span class="chip">SEO</span><span class="chip">Canva</span></div>
+          </article>
+          <article class="card project">
+            <div class="project-top" aria-hidden="true">02</div>
+            <h3>Royal Travels</h3>
+            <p><strong>Digital marketing project</strong></p>
+            <ul>
+              <li>Researched keywords and developed search-optimized content for travel packages, tourism services, and destinations.</li>
+              <li>Applied on-page SEO to headings, page copy, meta content, and internal-link opportunities.</li>
+              <li>Produced social captions, hashtags, and promotional copy for audience-focused campaigns.</li>
+            </ul>
+            <div class="chips"><span class="chip">Keyword Research</span><span class="chip">Content SEO</span><span class="chip">Social Media</span></div>
+          </article>
+          <article class="card project">
+            <div class="project-top" aria-hidden="true">03</div>
+            <h3>Royal Textiles</h3>
+            <p><strong>WordPress & SEO content project</strong></p>
+            <ul>
+              <li>Wrote keyword-focused product descriptions for cotton fabrics, silk sarees, and men's clothing.</li>
+              <li>Managed WordPress categories and tags to organize content and support product discovery.</li>
+              <li>Optimized product and category copy and created promotional content for digital channels.</li>
+            </ul>
+            <div class="chips"><span class="chip">WordPress</span><span class="chip">Product SEO</span><span class="chip">Copywriting</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" style="background:#fff">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Academic background</div>
+          <h2 class="section-title">Education & certifications</h2>
+        </div>
+        <div class="about-grid">
+          <div class="card">
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-marker" aria-hidden="true"></span>
+                <div class="timeline-content">
+                  <h3>Master of Science (M.Sc.) in Computer Science</h3>
+                  <div class="meta">Bharathiar University · 2023</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-marker" aria-hidden="true"></span>
+                <div class="timeline-content">
+                  <h3>Bachelor of Science (B.Sc.) in Computer Science</h3>
+                  <div class="meta">Bharathiar University · 2021</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Certifications</h3>
+            <div class="chips">
+              <span class="chip">Digital Marketing</span><span class="chip">Search Engine Optimization (SEO)</span><span class="chip">Google Ads</span><span class="chip">Google Analytics</span><span class="chip">WordPress</span>
+            </div>
+            <p style="margin-top:18px">Certification names are shown as provided in the resume. Issuing organizations and completion dates were not specified.</p>
+            <h3 style="margin-top:24px">Languages</h3>
+            <div class="chips"><span class="chip">Tamil</span><span class="chip">English</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Contact</div>
+          <h2 class="section-title">Let's connect.</h2>
+          <p>For digital marketing opportunities, SEO projects, or collaboration, reach out using the details below.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card"><span>Email</span><a href="mailto:dineshfab52@gmail.com">dineshfab52@gmail.com</a></div>
+          <div class="contact-card"><span>Phone</span><a href="tel:+919344483937">+91 93444 83937</a></div>
+          <div class="contact-card"><span>Location</span><p>Coimbatore, Tamil Nadu, India</p></div>
+          <div class="contact-card"><span>Portfolio</span><a href="https://dineshdm.site.je/wp" target="_blank" rel="noopener noreferrer">Visit my website ↗</a></div>
+        </div>
+        <div class="actions"><a class="btn btn-primary" href="mailto:dineshfab52@gmail.com?subject=Digital%20Marketing%20Opportunity">Email Me</a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container">© <span id="year">2026</span> Dinesh N · Digital Marketing Executive</div></footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
